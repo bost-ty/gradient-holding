@@ -1,6 +1,6 @@
-# gradient-holding
+<h1 style="text-align:center;font-variant:small-caps;">gradient-holding</h1>
 
-Based on another page that spins a gradient. 
+Based on another page that spins a gradient in a holding pattern.
 
 Removed jQuery, popper, Google Font call, fullscreen on double click, a div, and some styling.
 
