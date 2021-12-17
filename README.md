@@ -2,7 +2,7 @@
 
 Based on another page that spins a gradient in a holding pattern.
 
-Removed jQuery, popper, Google Font call, fullscreen on double click, a div, and some styling.
+Removed jQuery, Popper, a Google Font call, fullscreen on double click, a div, and some styling.
 
 `styles.css` and `main.js` contain the same code inlined to `index.max.html`; `index.html` is the minified version.
 
