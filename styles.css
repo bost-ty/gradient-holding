@@ -1,0 +1,21 @@
+html {
+  min-height: 100vh;
+}
+
+body {
+  --angle: 90deg;
+  --dark: hsla(0, 70%, 50%, 1);
+  --medium: hsla(0, 60%, 60%, 1);
+  --light: hsla(0, 50%, 70%, 1);
+  --perc: 50%;
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(
+    var(--angle),
+    var(--dark) 0%,
+    var(--medium) var(--perc),
+    var(--light) 100%
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
