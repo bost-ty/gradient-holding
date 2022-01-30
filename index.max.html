@@ -16,7 +16,7 @@
         --medium: hsla(0, 60%, 60%, 1);
         --light: hsla(0, 50%, 70%, 1);
         --perc: 50%;
-        height: 100%;
+        min-height: 100vh;
         margin: 0;
         background: linear-gradient(
           var(--angle),
@@ -26,13 +26,36 @@
         );
         background-attachment: fixed;
         background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #display {
+        font-size: 5rem;
+        font-family: "IBM Plex Mono";
+        color: white;
+        width: 100%;
+        text-align: center;
+        filter: drop-shadow(1px 1px 0px black) drop-shadow(-1px -1px 0px black)
+          drop-shadow(1px -1px 1px black) drop-shadow(-1px 1px 1px black);
+        font-weight: 900;
+        font-style: italic;
       }
     </style>
   </head>
   <body id="body">
+    <p id="display">Display this text</p>
     <script>
       const body = document.getElementById("body");
       const bs = body.style;
+
+      const display = document.getElementById("display");
+      // Get query param from URL, set display text to value
+      display.textContent = window.location.search
+        .substring(1)
+        .split("+")
+        .join(" ");
 
       var j = 50;
       var k = 0;
