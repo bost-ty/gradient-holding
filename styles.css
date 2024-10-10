@@ -1,21 +1,42 @@
 html {
-  min-height: 100vh;
+	min-height: 100vh;
 }
 
 body {
-  --angle: 90deg;
-  --dark: hsla(0, 70%, 50%, 1);
-  --medium: hsla(0, 60%, 60%, 1);
-  --light: hsla(0, 50%, 70%, 1);
-  --perc: 50%;
-  height: 100%;
-  margin: 0;
-  background: linear-gradient(
-    var(--angle),
-    var(--dark) 0%,
-    var(--medium) var(--perc),
-    var(--light) 100%
-  );
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+	--angle: 90deg;
+	--dark: hsla(0, 70%, 50%, 1);
+	--medium: hsla(0, 60%, 60%, 1);
+	--light: hsla(0, 50%, 70%, 1);
+	--perc: 50%;
+	min-height: 100vh;
+	margin: 0;
+	background: linear-gradient(
+		var(--angle),
+		var(--dark) 0%,
+		var(--medium) var(--perc),
+		var(--light) 100%
+	);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#display {
+	font-size: 8vw;
+	font-family: "IBM Plex Mono";
+	color: white;
+	width: 100%;
+	text-align: center;
+	filter: drop-shadow(3px -2px 3px rgba(10, 10, 10, 0.2))
+		drop-shadow(-3px -2px 3px rgba(10, 10, 10, 0.2))
+		drop-shadow(-1px 1px 1px rgba(30, 30, 30, 0.2))
+		drop-shadow(1px 1px 1px rgba(50, 50, 50, 0.2))
+		drop-shadow(-2px 2px 2px rgba(40, 40, 40, 0.3))
+		drop-shadow(2px 3px 3px rgba(30, 30, 30, 0.4))
+		drop-shadow(-4px 5px 5px rgba(20, 20, 20, 0.5))
+		drop-shadow(4px 8px 8px rgba(10, 10, 10, 0.6));
+	font-weight: 900;
+	font-style: italic;
 }

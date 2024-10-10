@@ -1,0 +1,5 @@
+{
+	"scripts": {
+		"build": "npx inliner index.max.html > dist/index.html"
+	}
+}

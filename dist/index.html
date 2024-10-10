@@ -1,1 +1,68 @@
-<!DOCTYPE html><html lang="en"> <head> <meta charset="UTF-8"/> <meta http-equiv="X-UA-Compatible" content="IE=edge"/> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <title>gradient-holding</title> <style>html{min-height: 100vh;}body{--angle: 90deg; --dark: hsla(0, 70%, 50%, 1); --medium: hsla(0, 60%, 60%, 1); --light: hsla(0, 50%, 70%, 1); --perc: 50%; height: 100%; margin: 0; background: linear-gradient( var(--angle), var(--dark) 0%, var(--medium) var(--perc), var(--light) 100% ); background-attachment: fixed; background-repeat: no-repeat;}</style> </head> <body id="body"> <script>const body=document.getElementById("body"); const bs=body.style; var j=50; var k=0; function sleep(ms){return new Promise((resolve)=> setTimeout(resolve, ms));}async function percchanger(){while (j==50){if (j==50){for (j=50; j < 66; j++){await sleep(100);}}if (j==66){for (j=66; j > 50; j--){await sleep(100);}}}}async function rotator(){for (k=0; k <=360; k++){await sleep(200); if (k==360){k=0;}}}async function darkchanger(){var i; for (i=0; i < 361; i++){prop="hsla(" + i + ",75%,70%,1)"; temp=i + 30; prop2="hsla(" + temp + ",65%,70%,1)"; temp=temp + 20; prop3="hsla(" + temp + ",55%,70%,1)"; prop4=k + "deg"; prop5=j + "%"; await sleep(100); bs.setProperty("--dark", prop); bs.setProperty("--medium", prop2); bs.setProperty("--light", prop3); bs.setProperty("--angle", prop4); bs.setProperty("--perc", prop5); if (i==360){i=0;}}}async function main(){rotator(); darkchanger(); percchanger();}main(); </script> </body></html>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>gradient-holding</title> <style>html{ min-height:100vh;}body{ --angle:90deg;--dark:hsla(0, 70%, 50%, 1);--medium:hsla(0, 60%, 60%, 1);--light:hsla(0, 50%, 70%, 1);--perc:50%;min-height:100vh;margin:0;background:linear-gradient( var(--angle), var(--dark) 0%, var(--medium) var(--perc), var(--light) 100% );background-attachment:fixed;background-repeat:no-repeat;display:flex;align-items:center;justify-content:center;}#display{ font-size:8vw;font-family:"IBM Plex Mono";color:white;width:100%;text-align:center;filter:drop-shadow(3px -2px 3px rgba(10, 10, 10, 0.2)) drop-shadow(-3px -2px 3px rgba(10, 10, 10, 0.2)) drop-shadow(-1px 1px 1px rgba(30, 30, 30, 0.2)) drop-shadow(1px 1px 1px rgba(50, 50, 50, 0.2)) drop-shadow(-2px 2px 2px rgba(40, 40, 40, 0.3)) drop-shadow(2px 3px 3px rgba(30, 30, 30, 0.4)) drop-shadow(-4px 5px 5px rgba(20, 20, 20, 0.5)) drop-shadow(4px 8px 8px rgba(10, 10, 10, 0.6));font-weight:900;font-style:italic;}</style> </head> <body id="body"> <p id="display">Display this text</p> <script>const body = document.getElementById("body");
+const bs = body.style;
+
+const display = document.getElementById("display");
+// Get query param from URL, set display text to value
+display.textContent = window.location.search.substring(1).split("+").join(" ");
+
+var j = 50;
+var k = 0;
+
+function sleep(ms) {
+ return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function percentChanger() {
+ while (j == 50) {
+  if (j == 50) {
+   for (j = 50; j < 66; j++) {
+    await sleep(100);
+   }
+  }
+  if (j == 66) {
+   for (j = 66; j > 50; j--) {
+    await sleep(100);
+   }
+  }
+ }
+}
+
+async function rotator() {
+ for (k = 0; k <= 360; k++) {
+  await sleep(200);
+  if (k == 360) {
+   k = 0;
+  }
+ }
+}
+
+async function darkChanger() {
+ for (let i = 0; i < 361; i++) {
+  prop = "hsla(" + i + ",75%,70%,1)";
+  temp = i + 30;
+  prop2 = "hsla(" + temp + ",65%,70%,1)";
+  temp = temp + 20;
+  prop3 = "hsla(" + temp + ",55%,70%,1)";
+  prop4 = k + "deg";
+  prop5 = j + "%";
+  await sleep(100);
+
+  bs.setProperty("--dark", prop);
+  bs.setProperty("--medium", prop2);
+  bs.setProperty("--light", prop3);
+  bs.setProperty("--angle", prop4);
+  bs.setProperty("--perc", prop5);
+
+  if (i == 360) {
+   i = 0;
+  }
+ }
+}
+
+async function main() {
+ rotator();
+ darkChanger();
+ percentChanger();
+}
+
+main();</script> </body> </html> 
