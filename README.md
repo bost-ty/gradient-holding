@@ -1,6 +1,7 @@
 <h1 style="text-align:center;font-variant:small-caps;">gradient-holding</h1>
 
-<a href="https://bost-ty.github.io/gradient-holding/dist/">See it in action</a>
+<a href="https://bost-ty.github.io/gradient-holding/alt.html">See the new, more performant alternative in action</a>
+<a href="https://bost-ty.github.io/gradient-holding/dist/">See the original in action</a>
 
 Based on another page that spins a gradient in a holding pattern.
 
