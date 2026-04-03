@@ -16,12 +16,12 @@ async function percentChanger() {
 	while (j == 50) {
 		if (j == 50) {
 			for (j = 50; j < 66; j++) {
-				await sleep(100);
+				await sleep(200);
 			}
 		}
 		if (j == 66) {
 			for (j = 66; j > 50; j--) {
-				await sleep(100);
+				await sleep(200);
 			}
 		}
 	}
@@ -29,7 +29,7 @@ async function percentChanger() {
 
 async function rotator() {
 	for (k = 0; k <= 360; k++) {
-		await sleep(200);
+		await sleep(400);
 		if (k == 360) {
 			k = 0;
 		}
@@ -45,7 +45,7 @@ async function darkChanger() {
 		prop3 = "hsla(" + temp + ",55%,70%,1)";
 		prop4 = k + "deg";
 		prop5 = j + "%";
-		await sleep(100);
+		await sleep(200);
 
 		bs.setProperty("--dark", prop);
 		bs.setProperty("--medium", prop2);
