@@ -1,5 +1,7 @@
 <h1 style="text-align:center;font-variant:small-caps;">gradient-holding</h1>
 
+<a href="https://bost-ty.github.io/gradient-holding/dist/">See it in action</a>
+
 Based on another page that spins a gradient in a holding pattern.
 
 Removed jQuery, Popper, a Google Font call, fullscreen on double click, a div, and some styling.
